@@ -3,6 +3,7 @@
 .gradle
 .idea
 .idea/
+.ideq/*
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -22,3 +23,5 @@
 .idea/gradle.xml
 .idea/misc.xml
 .idea/runConfigurations.xml
+.idea/gradle.xml
+.idea/misc.xml
