@@ -12,11 +12,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                //path 'src/main/cpp/CMakeLists.txt'
-
                 //cppFlags '-std=c++11'
                 //arguments '-DANDROID_TOOLCHAIN=clang', '-DANDROID_ARM_MODE=arm', '-DANDROID_STL=c++_shared'
-                cppFlags "-std=c++11 -frtti"// -fexceptions
+                cppFlags "-std=c++11 -frtti -fexceptions"//
             }
         }
 
@@ -40,6 +38,12 @@ android {
         cmake {
             path 'src/main/cpp/CMakeLists.txt'
         }
+    }
+
+    packagingOptions {
+        //exclude 'META-INF/*'
+        pickFirst 'lib/armeabi-v7a/libassimp.so'
+        pickFirst 'lib/armeabi-v7a/libopencv_java3.so'
     }
 }
 
