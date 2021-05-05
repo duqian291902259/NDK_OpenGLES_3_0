@@ -235,7 +235,7 @@ void FBOSample::Draw(int screenW, int screenH)
 	GO_CHECK_GL_ERROR();
 	glBindVertexArray(m_VaoIds[0]);
 	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, m_FboTextureId);
+	glBindTexture(GL_TEXTURE_2D, m_FboTextureId);//m_ImageTextureId则是直接绘制
 	glUniform1i(m_SamplerLoc, 0);
 	GO_CHECK_GL_ERROR();
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, (const void *)0);

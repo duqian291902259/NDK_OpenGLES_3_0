@@ -13,7 +13,7 @@
 
 #define VERTEX_STRIDE         (sizeof(GLfloat)*(VERTEX_POS_SIZE+VERTEX_COLOR_SIZE))
 
-VaoSample::VaoSample()
+VaoSample:: VaoSample()
 {
 	m_VaoId = 0;
 
